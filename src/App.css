@@ -1,38 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Nunito+Sans:wght@300;600;800&display=swap');
+
+/* --space-cadet: #2D3142;
+silver: #BFC0C0;
+mandarin: #EF8354;
+black-coral: #4F5D75; */
+
+/* General Styles */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  width: 100%;
+  font-family: 'B612', sans-serif;
+  background: rgb(233, 231, 221);
+  background: linear-gradient(16deg, rgba(233, 231, 221, 1) 2%, rgba(255, 255, 255, 0.6740896187576593) 87%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header */
+header {
+  font-family: 'Nunito Sans', sans-serif;
+  color: beige; 
+  padding: 100px 20px;  
+  background: rgb(191, 192, 192);
+  background: linear-gradient(356deg, rgba(191, 192, 192, 1) 36%, rgba(239, 131, 84, 1) 91%);
+  background-image: url("./youtube-red.jpg");
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 15px 15px;
+}
+
+h1{
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;  
+  margin: auto;
+  padding: 20px;
+  border: 5px solid white;
+  border-radius: 25px;
+  letter-spacing: 1.5px;
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 15px 15px;
+  background-color: rgb(212, 25, 25);
+}
+
+h2 {
+  text-align: center;
+}
+/* Main */
+main {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+    input {
+      padding: 15px;
+      width: 100%;
+      border: none;
+      text-indent: 15px;
+      border-radius: 6px;
+    }
+
+/* Search */
+.search {
+  width: 90%;
+  padding: 100px 0 50px 0;
+  margin: 0 auto;
+}
+
+.search-input {  
+  padding: 15px;
+  background: rgba(191, 192, 192, 0.3);
+  box-shadow: rgba(191, 192, 192, 0.4) 5px 5px, rgba(191, 192, 192, 0.3) 10px 10px, rgba(191, 192, 192, 0.2) 15px 15px, rgba(191, 192, 192, 0.1) 20px 20px, rgba(191, 192, 192, 0.05) 25px 25px;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.form {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 6px;
+  background: rgba(191, 192, 192, 0.3);
+  box-shadow: rgba(191, 192, 192, 0.4) 5px 5px, rgba(191, 192, 192, 0.3) 10px 10px, rgba(191, 192, 192, 0.2) 15px 15px, rgba(191, 192, 192, 0.1) 20px 20px, rgba(191, 192, 192, 0.05) 25px 25px;
+}
+
+.form-input {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  }
+
+  label {
+    width: 15%;
+    align-self: flex-end;  
+  }  
+
+
+.add-video-container{
+ text-align: center;
+ padding-bottom: 70px;
+}
+
+#btn-add-video {
+  margin: 0 auto;
+  width: 70px;
+  margin-bottom: 50px;
+}
+
+.buttons {
+   display: flex;
+   align-content: space-between;
+   justify-content: flex-end;
+   gap: 15px;
+   border: none;
+   font-family: 'Nunito Sans', sans-serif;
+ }
+
+button {
+  display: block;
+  width: 80px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background: rgba(239, 131, 84, 1);
+  color: azure;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-top: 20px;
+
+}
+
+button:hover {
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 5px 15px;
+}
+
+.add {
+  background: rgba(79, 93, 117, 1);
+}
+
+.add:hover {
+  background: rgba(79, 93, 117, 0.7);  
+}
+
+.cancel {
+background: rgba(239, 131, 84, 1);
+}
+
+.cancel:hover {
+  background: rgba(239, 131, 84, 0.7);
+}
+
+
+/* Video */
+.video {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.votes {
+  margin: 0 auto;
+  padding:0;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  gap: 15px;
+  max-width: 560px;
+}
+
+#smiley-face, #down-vote-face {
+  width: 40px;
+}
+
+#upvote, #downvote {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.rating {
+  border-color: #EF8354;
+  border-style: inset;
+  border-width: 5px;
+  height: 60px;
+  width: 180px;
+  border-radius: 6px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgb(222, 226, 233);
+  font-weight: 700;
+  color: #4F5D75;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+#remove {
+  margin: 0 auto 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+iframe {
+  max-width: 100%;
+  display: block;
+  margin: 50px auto;
+
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 25px 20px -20px;
+
+}
+
+
+hr {
+      height: 10px;
+      border: 0;
+      box-shadow: 0 10px 10px -10px #8c8c8c inset;
+      padding-bottom: 50px;
+      
+    
+}
+@media only screen and (min-width: 600px) {
+
+  /* Header */
+  h1 {
+    font-size: 40px;
+      width: 500px;
   }
 }
+
