@@ -19,11 +19,11 @@ function Homepage() {
     setFilteredList(newFilteredList);
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  // }
 
-  function handleAdd() {}
+  // function handleAdd() {}
 
   function handleAddNewVideo(title, url) {
     const newItem = {
